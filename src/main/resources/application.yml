@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: CI-CD-test
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/user_db
+    password: postgres
+    username: postgres
+    name: user_db
