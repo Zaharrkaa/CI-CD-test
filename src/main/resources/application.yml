@@ -3,7 +3,8 @@ spring:
     name: CI-CD-test
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/user_db
-    password: postgres
-    username: postgres
-    name: user_db
+    url: ${SPRING_DATASOURCE_URL}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    username: ${SPRING_DATASOURCE_USERNAME}
+  config:
+    import: optional:file:.env[.properties]
