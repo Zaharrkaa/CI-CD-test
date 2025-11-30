@@ -15,4 +15,8 @@ public class UserService {
     public List<User> findAll() {
         return userRepo.findAll();
     }
+
+    public User findById(long id) {
+        return userRepo.findById(id).orElseThrow(RuntimeException::new);
+    }
 }
